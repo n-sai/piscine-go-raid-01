@@ -7,9 +7,10 @@ func Raid1a(width, height int) {
 		if i == 0 || i == height-1 {
 			for j := 0; j < width; j++ {
 				if width < 0 || height < 0 {
+					z01.PrintRune('\n')
 					break
 				} else if j == 0 || j == width-1 {
-					z01.PrintRune('0')
+					z01.PrintRune(48)
 				} else {
 					z01.PrintRune('-')
 				}
