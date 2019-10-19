@@ -2,48 +2,43 @@ package student
 
 import "github.com/01-edu/z01"
 
-func Raid1e(x, y int) {
+
+func Raid1e(width, height int) {
 	if x == 0 || y == 0 {
 		return
 	}
-	for z := 0; z < y; z++ {
-		if z == 0 {
-			for c := 0; c < x; c++ {
-				if c == 0 {
+	for i := 0; i < height; i++ {
+		if i == 0 {
+			for j := 0; j < width; j++ {
+				if j == 0 {
 					z01.PrintRune('A')
-				} else if c == x-1 {
+				} else if j == (width-1) {
 					z01.PrintRune('C')
 				} else {
 					z01.PrintRune('B')
 				}
-
 			}
 			z01.PrintRune(10)
-		} else if z == y-1 {
-			for c := 0; c < x; c++ {
-				if c == 0 {
+		} else if i == height -1 {
+			for j := 0; j < width; j++ {
+				if j == 0 {
 					z01.PrintRune('C')
-				} else if c == x-1 {
+				} else if j == width-1 {
 					z01.PrintRune('A')
 				} else {
 					z01.PrintRune('B')
 				}
-
 			}
 			z01.PrintRune(10)
-
 		} else {
-			for c := 0; c < x; c++ {
-				if c == 0 {
-					z01.PrintRune('B')
-				} else if c == x-1 {
+			for j := 0; j < width; j++ {
+				if j == 0 || j == width-1 {
 					z01.PrintRune('B')
 				} else {
 					z01.PrintRune(' ')
 				}
-
 			}
-			z01.PrintRune('\n')
+			z01.PrintRune(10)
 		}
 	}
 }
