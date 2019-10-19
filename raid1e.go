@@ -3,8 +3,7 @@ package student
 import "github.com/01-edu/z01"
 
 func Raid1e(width, height int) {
-	if width == 0 || height == 0 {
-		z01.PrintRune(10)
+	if width < 0 || height < 0 {
 		return
 	}
 	for i := 0; i < height; i++ {
