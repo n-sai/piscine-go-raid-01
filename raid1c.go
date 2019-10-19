@@ -16,23 +16,21 @@ func Raid1c(width, height int) {
 				}
 			}
 			z01.PrintRune(10)
-		}
-		if i > 0 && i < height-1 {
-			for j := 0; j < width; j++ {
-				if j == 0 || j == width-1 {
-					z01.PrintRune('B')
-				} else {
-					z01.PrintRune(' ')
-				}
-			}
-			z01.PrintRune(10)
-		}
-		if i == height-1 {
+		} else if i == height-1 {
 			for j := 0; j < width; j++ {
 				if j == 0 || j == width-1 {
 					z01.PrintRune('C')
 				} else {
 					z01.PrintRune('B')
+				}
+			}
+			z01.PrintRune(10)
+		} else {
+			for j := 0; j < width; j++ {
+				if j == 0 || j == width-1 {
+					z01.PrintRune('B')
+				} else {
+					z01.PrintRune(' ')
 				}
 			}
 			z01.PrintRune(10)
