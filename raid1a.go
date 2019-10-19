@@ -6,7 +6,9 @@ func Raid1a(width, height int) {
 	for i := 0; i < height; i++ {
 		if i == 0 || i == height-1 {
 			for j := 0; j < width; j++ {
-				if j == 0 || j == width-1 {
+				if width < 0 || height < 0 {
+					break
+				} else if j == 0 || j == width-1 {
 					z01.PrintRune('0')
 				} else {
 					z01.PrintRune('-')
