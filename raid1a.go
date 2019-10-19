@@ -10,7 +10,7 @@ func Raid1a(width, height int) {
 					z01.PrintRune('\n')
 					break
 				} else if j == 0 || j == width-1 {
-					z01.PrintRune(48)
+					z01.PrintRune('o')
 				} else {
 					z01.PrintRune('-')
 				}
