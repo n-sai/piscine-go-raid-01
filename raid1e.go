@@ -2,7 +2,6 @@ package student
 
 import "github.com/01-edu/z01"
 
-
 func Raid1e(width, height int) {
 	if width == 0 || height == 0 {
 		return
@@ -12,14 +11,14 @@ func Raid1e(width, height int) {
 			for j := 0; j < width; j++ {
 				if j == 0 {
 					z01.PrintRune('A')
-				} else if j == (width-1) {
+				} else if j == (width - 1) {
 					z01.PrintRune('C')
 				} else {
 					z01.PrintRune('B')
 				}
 			}
 			z01.PrintRune(10)
-		} else if i == height -1 {
+		} else if i == height-1 {
 			for j := 0; j < width; j++ {
 				if j == 0 {
 					z01.PrintRune('C')
