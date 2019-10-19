@@ -22,9 +22,9 @@ func Raid1e(x, y int) {
 		} else if z == y-1 {
 			for c := 0; c < x; c++ {
 				if c == 0 {
-					z01.PrintRune('A')
-				} else if c == x-1 {
 					z01.PrintRune('C')
+				} else if c == x-1 {
+					z01.PrintRune('A')
 				} else {
 					z01.PrintRune('B')
 				}
@@ -43,7 +43,7 @@ func Raid1e(x, y int) {
 				}
 
 			}
-			z01.PrintRune(10)
+			z01.PrintRune('\n')
 		}
 	}
 }
